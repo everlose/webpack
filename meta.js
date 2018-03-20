@@ -180,6 +180,7 @@ module.exports = {
     }) {
         const green = chalk.green
 
+        console.log(green)
         sortDependencies(data, green)
 
         const cwd = path.join(process.cwd(), data.inPlace ? '' : data.destDirName)
