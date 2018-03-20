@@ -13,7 +13,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init everlose/webpack my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -29,16 +29,9 @@ $ vue init webpack#develop my-project
 
 The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init everlose/webpack my-project
-```
-
-debug
+## debug
 
 ```bash
-vue init ./ create-test
+$ cd webpack
+$ vue init ./ create-test
 ```
