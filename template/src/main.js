@@ -8,19 +8,26 @@ import App from './App'
 import router from './router'
 {{/router}}
 
+{{#vuex}}
+import store from  './store'
+{{/vuex}}
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  {{#router}}
-  router,
-  {{/router}}
-  {{#if_eq build "runtime"}}
-  render: h => h(App)
-  {{/if_eq}}
-  {{#if_eq build "standalone"}}
-  components: { App },
-  template: '<App/>'
-  {{/if_eq}}
+    el: '#app',
+    {{#router}}
+    router,
+    {{/router}}
+    {{#vuex}}
+    store,
+    {{/vuex}}
+    {{#if_eq build "runtime"}}
+    render: h => h(App)
+    {{/if_eq}}
+    {{#if_eq build "standalone"}}
+    components: { App },
+    template: '<App/>'
+    {{/if_eq}}
 })
